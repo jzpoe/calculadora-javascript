@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+        let num1;
+        let num2;
+      function suma(num1, num2) {
+        resultado = Number(num1) + Number(num2);
+        return resultado;
+      }
+
+      function resta(num1, num2) {
+        resultado = num1 - num2;
+        return resultado;
+      }
+
+      function multiplicacion(num1, num2) {
+        resultado = num1 * num2;
+        return resultado;
+      }
+
+      function division(num1, num2) {
+        if(num2 == 0){
+               alert("error en el segundo numero") 
+        }
+        resultado = num1 / num2;
+        return resultado;
+      }
+
+      let operacion;
+
+      do {
+        operacion = prompt(
+          "¿ seleccione que operacion desea realizar 1 SUMA  2. RESTA 3. MULTIPLICACION 4. DIVISION SALIR 0?"
+        );
+
+              
+if(operacion !="0"){
+    let a = prompt("ingresa el primer numero");
+        let b = prompt("infresa el segundo numero");
+
+        switch (operacion) {
+          case "1":
+            alert("el valor de la suma es: " + suma(a, b) );
+
+            break;
+          case "2":
+          alert("el valor de la resta es: " + resta(a, b) );
+
+          case "3":
+          alert("el valor de la multiplicacion es: " + multiplicacion(a, b) );
+            break;
+
+            case "4":
+                
+                    alert("el valor de la division es: " + division(a, b) );
+                
+          
+            break;
+
+          default:
+            document.write("opcion invalida");
+            break;
+        }
+}
+        
+      } while (operacion !== "0");
+
+      // let a = prompt("ingrese un valor");
+      // let b = prompt("ingrese un segundo valor");
+
+      //         function suma(a,b){
+
+      //             let resultado = Number(a)+ Number(b) // se utiliza Number para convertir el valor ingresado en numero para que no lo concatene
+      //             return resultado;
+      //         }
+
+      //         document.write("el valor de la suma es: " + suma(a,b) + "<br>" );
+
+      //         // funcion flecha
+
+      //         let y = prompt("ingresa el valor a calcular el cuadrado");
+
+      //         cuadrado =(x)=> x*x;
+
+      //         document.write("el valor de X al cuadrado es: ", + cuadrado(y)+ "<br>" )
+    </script>
+  </body>
+</html>
